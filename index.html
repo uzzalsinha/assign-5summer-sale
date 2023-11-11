@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Sale</title>
+    <!-- daisy Ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body>
+    <header>
+        <!-- banner section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-4 bg-warning items-center ">
+            <div class="mx-auto">
+                <!-- writing part -->
+                <h3 class="font-bold text-3xl"> --Sale Fever--</h3>
+                <h3>Purchase Taka 200 or above <br> <span class="text-pink-700">& get 20% off</span></h3>
+                <p>Use Promo Code <button class="btn btn-secondary"> SELL200</button> </p> 
+            </div>
+            <div class="items-center mx-auto">
+                <!-- picture part -->
+                <img src="./images/Summer 1.png" alt="">
+
+            </div>
+
+        </div>
+    </header>
+    <main class="bg-gray-100">
+      <div class="flex-none md:flex lg:flex">
+               
+        <div class="flex my-10 mx-0 md:mx-5 lg:mx-5">
+          <!-- products part -->
+         <div class="w-w-full md:w-9/12 lg:w-9/12 mx-24 md:mx-44 lg:mx-44">
+             <!-- Kitchenware Products -->
+             <h1 class="text-4xl font-bold mx-10">Kitchensware</h1>
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-5 bg-white">
+                 <div class="card bg-base-100 shadow-xl mx-5 my-5">
+                     <figure class="px-10 pt-10 bg-gray-100">
+                       <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
+                     </figure>
+                     <div class="card-body items-center text-center">
+                       <h2 class="card-title">Wood spoons</h2>
+                         <p><span id="spoon">78</span>TK</p>
+                       <div class="card-actions">
+                         <button class="btn btn-primary" onClick="getKitchenPrice('spoon', 'Wood Spoons')">Buy Now</button>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="card bg-base-100 shadow-xl mx-5 my-5">
+                     <figure class="px-10 pt-10 bg-gray-100">
+                       <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
+                     </figure>
+                     <div class="card-body items-center text-center">
+                       <h2 class="card-title">K.Accesories</h2>
+                         <p><span id="k">210</span>TK</p>
+                       <div class="card-actions">
+                         <button class="btn btn-primary" onClick="getKitchenPrice('k', 'K.Accessories')">Buy Now</button>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="card bg-base-100 shadow-xl mx-5 my-5">
+                     <figure class="px-10 pt-10 bg-gray-100">
+                       <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
+                     </figure>
+                     <div class="card-body items-center text-center">
+                       <h2 class="card-title">Rice Cooker</h2>
+                         <p><span id="rice_cooker">39</span>TK</p>
+                       <div class="card-actions">
+                         <button class="btn btn-primary" onClick="getKitchenPrice('rice_cooker', 'Rice Cooker')">Buy Now</button>
+                       </div>
+                     </div>
+                   </div>
+             </div>
+             <!-- Sports Products -->
+             <h1 class="text-4xl font-bold mx-10">Sportsware</h1>
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-5 bg-white">
+                 
+                     <!-- sport product-1 -->
+                 <div class="card bg-base-100 shadow-xl mx-5 my-5">
+                     <figure class="px-10 pt-10 bg-gray-100">
+                       <img src="./images/prod4.png" alt="Shoes" class="rounded-xl" />
+                     </figure>
+                     <div class="card-body items-center text-center">
+                       <h2 class="card-title">Cap</h2>
+                         <p><span id="cap">39</span>TK</p>
+                       <div class="card-actions">
+                         <button class="btn btn-primary" onClick="getKitchenPrice('cap', 'Cap')">Buy Now</button>
+                       </div>
+                     </div>
+                   </div>
+ 
+                   <div class="card bg-base-100 shadow-xl mx-5 my-5">
+                     <figure class="px-10 pt-10 bg-gray-100">
+                       <img src="./images/prod5.png" alt="Shoes" class="rounded-xl" />
+                     </figure>
+                     <div class="card-body items-center text-center">
+                       <h2 class="card-title">Joursey</h2>
+                         <p><span id="joursey">150</span>TK</p>
+                       <div class="card-actions">
+                         <button class="btn btn-primary" onClick="getKitchenPrice('joursey','Joursey')">Buy Now</button>
+                       </div>
+                     </div>
+                   </div>
+ 
+                   <div class="card bg-base-100 shadow-xl mx-5 my-5">
+                     <figure class="px-10 pt-10 bg-gray-100">
+                       <img src="./images/prod6.png" alt="Shoes" class="rounded-xl" />
+                     </figure>
+                     <div class="card-body items-center text-center">
+                       <h2 class="card-title">Shoe</h2>
+                         <p><span id="shoe">1200</span>TK</p>
+                       <div class="card-actions">
+                         <button class="btn btn-primary" onClick="getKitchenPrice('shoe', 'Shoe')">Buy Now</button>
+                       </div>
+                     </div>
+                   </div>
+ 
+ 
+             </div>
+ 
+ 
+   
+         </div>
+
+     </div>
+     
+         <!-- cart part -->
+         <div class="ml-4 md:-ml-24 lg:-ml-24 mr-32 md:mr-40 lg:mr-8 my-10 p-5 mx-auto w-full md:w-1/4 lg:w-1/4">
+           <!-- coupon part -->
+            <div class="bg-white p-5">
+                <h3 class="text-3xl font-bold mb-5">Have Coupon?</h3>
+                <input type="text" placeholder="Coupon Code" class="input input-bordered input-primary w-2/5 md:w-3/5 lg:w-3/5 max-w-xs" id="promoCode"/>
+                <button id="coupon" class="btn btn-secondary cursor-not-allowed opacity-1" onClick="getDiscount()">Apply</button>
+
+            </div>
+
+            <!-- list of cart products -->
+            <div class="mt-1 bg-white p-5">
+                <ol id="cart_item" class="font-bold">
+                    <!-- <li>here cart itm will showed</li> -->
+
+                </ol>
+
+            </div>
+            <!-- price of carted products -->
+            <div class="my-1 bg-white p-5">
+                <h4 class="font-bold">Total Price: <span id="total_price">0</span> TK</h4>
+                <h4 class="font-bold">Discount: <span id="discount"></span></h4>
+                <h4 class="font-bold">Total: <span id="totalAfterDiscount"></span></h4>
+
+                <!-- <button class="btn btn-primary cursor-not-allowed">Make Purchase</button> -->
+
+                <!-- modal -->
+                <!-- Open the modal using ID.showModal() method -->
+
+            </div>
+            <div class="bg-white p-5">
+              <button class="btn btn-secondary cursor-not-allowed" id="modal" onclick="purchase()">Make Purchase</button>
+            </div>
+            <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <i class="fa-solid fa-circle-check fa-3x mx-56"></i>
+                <h3 class="font-bold text-lg text-center mt-3">Congratulations</h3>
+                <p class="py-1 text-center">You have successfully purchased</p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-secondary mx-40" onClick="goHome()">Go Home</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+        </div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+
+   <script src="js/price_calculation.js"></script>
+</html>
